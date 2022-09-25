@@ -1,6 +1,6 @@
 <?php
 
-namespace YouCan\Entities\Location;
+namespace YouCan\Entities;
 
 class Location
 {

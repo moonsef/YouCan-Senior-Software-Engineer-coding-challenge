@@ -2,7 +2,7 @@
 
 namespace YouCan\Services\GoogleMaps;
 
-use YouCan\Entities\Location\LocationCollection;
+use YouCan\Entities\LocationCollection;
 
 interface FindLocationService
 {
