@@ -1,6 +1,12 @@
 {
   "name": "youcan/coding_challenge",
   "description": "YouCan senior PHP software engineer coding challenge",
+  "authors": [
+    {
+      "name": "MONSEF BEN DRIOUICHE",
+      "email": "bendriouichemonsef@gmail.com"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "YouCan\\": "src/"
