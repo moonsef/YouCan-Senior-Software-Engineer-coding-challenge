@@ -50,7 +50,7 @@ class ApiServiceTest extends TestCase
         // first request
         try {
             $res = $api_service_impl->get('/', []);
-            $this->assertEquals([], $res);
+            $this->assertEquals('Request status OK!', $res[0]);
         } catch (GuzzleException $e) {
         }
 
@@ -58,7 +58,7 @@ class ApiServiceTest extends TestCase
         // second request
         try {
             $res = $api_service_impl->get('/', []);
-            $this->assertEquals([], $res);
+            $this->assertEquals('Request status OK!', $res[0]);
         } catch (GuzzleException $e) {
         }
 
@@ -66,7 +66,7 @@ class ApiServiceTest extends TestCase
         // third request
         try {
             $res = $api_service_impl->get('/', []);
-            $this->assertEquals([], $res);
+            $this->assertEquals('Request status OK!', $res[0]);
         } catch (GuzzleException $e) {
         }
 

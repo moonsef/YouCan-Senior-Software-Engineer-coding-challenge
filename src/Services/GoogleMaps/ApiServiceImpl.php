@@ -45,7 +45,7 @@ class ApiServiceImpl implements ApiService
     public function get(string $endpoint, array $params): array
     {
         try {
-            $this->client->request(
+            $res = $this->client->request(
                 'GET',
                 $endpoint,
                 [
@@ -53,16 +53,15 @@ class ApiServiceImpl implements ApiService
                 ]
             );
 
-            return [];
+            return [$res->getBody()->getContents()];
+
         } catch (GuzzleException $e) {
             if ($this->max_attempts > $this->attempts_count) {
                 $this->attempts_count += 1;
-                $this->get($endpoint, $params);
+                return $this->get($endpoint, $params);
             } else {
                 throw $e;
             }
-
-            return [];
         }
     }
 }
