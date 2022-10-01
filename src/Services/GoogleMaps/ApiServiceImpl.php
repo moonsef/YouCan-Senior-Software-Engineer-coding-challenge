@@ -19,7 +19,7 @@ class ApiServiceImpl implements ApiService
      * Failed http requests counter
      * @var int
      */
-    private int $attempts_count = 0;
+    private int $attempts_count = 1;
 
 
     /**
@@ -64,4 +64,13 @@ class ApiServiceImpl implements ApiService
             }
         }
     }
+
+    /**
+     * @return int
+     */
+    public function getAttemptsCount(): int
+    {
+        return $this->attempts_count;
+    }
+
 }
